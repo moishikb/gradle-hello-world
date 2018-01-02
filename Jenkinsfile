@@ -19,11 +19,11 @@ node('slave1')
       tests = ["one":{sh "test-data/int-test.sh build/libs/oto-gradle-1.0.jar otoMato 'Hello Otomato!'"},"two":{sh "test-data/int-test.sh build/libs/oto-gradle-1.0.jar mosheBoim 'Hello Mosheboim!'"},"three":{sh "test-data/int-test.sh build/libs/oto-gradle-1.0.jar davidSalkin 'Hello Davidsalkin!'"}]
       for (int i =0; i < 3; i++)  {     
          taskstorun["${i}"] = {
-            node ('slave1')
+            node ()
             {
                stage("step_${i}")
                {
-                  tests[${i}]
+                  tests["${i}"]
                }
            }
          }
