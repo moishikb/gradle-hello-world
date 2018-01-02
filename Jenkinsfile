@@ -9,4 +9,8 @@ node('slave1')
   {
     sh "${gradle4}/bin/gradle build --info"
   }
+   stage('unit-test')
+   {
+       sh "${gradle4}/bin/gradle test"
+   }
 }
