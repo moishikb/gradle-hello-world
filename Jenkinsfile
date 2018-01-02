@@ -6,6 +6,6 @@ node('slave1')
   }
   stage('BUILD')
   {
-    gradle build
+    sh 'gradle build --info'
   }
 }
