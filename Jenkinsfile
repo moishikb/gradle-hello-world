@@ -1,4 +1,4 @@
-node('slave1)
+node('slave1')
 {
   stage('GET_RPO_FROM_GIT')
   {
