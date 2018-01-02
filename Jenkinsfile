@@ -7,6 +7,6 @@ node('slave1')
   }
   stage('BUILD')
   {
-    sh '"${gradle4}/bin/gradle build --info'
+    sh '"${gradle4}"/bin/gradle build --info'
   }
 }
